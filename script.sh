@@ -53,7 +53,7 @@ EOF
 # Make sure they actually are ready
 echo
 echo "This program patches will patch your OneShot game files. It expects the Steam version of OneShot to be installed and ready."
-read -p "Are you sure to continue? [Y/n] " contin
+read -r -p "Are you sure to continue? [Y/n] " contin < /dev/tty
 if [[ "$contin" != "y" && -n "$contin" ]]; then
     exit 1
 fi
