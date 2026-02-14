@@ -66,9 +66,8 @@ rm -f librt.so.1
 rm -f libcrypt.so.1
 rm -f libcrypto.so.1.1
 # Check if OneShot's Document directory exists
-if [[ ! -d "~/Documents/OneShot" ]]; then
-    mkdir -p "~/Documents/OneShot"
-    chmod 777 "~/Documents/OneShot"
+if [[ ! -d "$HOME/Documents/OneShot" ]]; then
+    mkdir -p "$HOME/Documents/OneShot"
 fi
 ln -sf "$HOME/.steam/root/steamapps/common/OneShot/_______" "$HOME/Documents/OneShot/_______"
 echo "Done! OneShot should now work. If it doesn't, it's an issue with the distro rather than OneShot itself."
