@@ -65,9 +65,11 @@ rm -f libstdc++.so.6
 rm -f librt.so.1
 rm -f libcrypt.so.1
 rm -f libcrypto.so.1.1
+# Fix a crash caused by a missing file (_______.png)
+cp "Wallpaper/save_unix.png" "_______.png"
 # Check if OneShot's Document directory exists
-if [[ ! -d "$HOME/Documents/OneShot" ]]; then
-    mkdir -p "$HOME/Documents/OneShot"
+if [[ ! -d "$HOME/Documents/Oneshot" ]]; then
+    mkdir -p "$HOME/Documents/Oneshot"
 fi
-ln -sf "$HOME/.steam/root/steamapps/common/OneShot/_______" "$HOME/Documents/OneShot/_______"
+ln -sf "$HOME/.steam/root/steamapps/common/OneShot/_______" "$HOME/Documents/Oneshot/_______"
 echo "Done! OneShot should now work. If it doesn't, it's an issue with the distro rather than OneShot itself."
